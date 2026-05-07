@@ -1,0 +1,11 @@
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/bin/Debug/net10.0/FinanceTracker.Domain.deps.json
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/bin/Debug/net10.0/FinanceTracker.Domain.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/bin/Debug/net10.0/FinanceTracker.Domain.pdb
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.AssemblyInfoInputs.cache
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.AssemblyInfo.cs
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.csproj.CoreCompileInputs.cache
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/refint/FinanceTracker.Domain.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.pdb
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/ref/FinanceTracker.Domain.dll
