@@ -5,6 +5,7 @@ using FinanceTracker.Application.Transactions.Commands.CreateTransaction;
 using FinanceTracker.Application.Transactions.Commands.DeleteTransaction;
 using FinanceTracker.Application.Transactions.Commands.UpdateTransaction;
 using FinanceTracker.Application.Transactions.Queries.GetTransactionById;
+using FinanceTracker.Application.Transactions.Queries.GetTransactions;
 using FinanceTracker.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -37,12 +38,22 @@ app.UseSwaggerUI();
 
 app.MapGet("/", () => "FinanceTracker API works!");
 
-app.MapGet("/transactions", async (AppDbContext db) =>
+app.MapGet("/transactions", async (
+    int? month,
+    int? year,
+    Guid? categoryId,
+    string? type,
+    IMediator mediator) =>
 {
-    return await db.Transactions
-        .Include(t => t.Account)
-        .Include(t => t.Category)
-        .ToListAsync();
+    var query = new GetTransactionsQuery(
+        month,
+        year,
+        categoryId,
+        type);
+
+    var transactions = await mediator.Send(query);
+
+    return Results.Ok(transactions);
 });
 
 app.MapGet("/transactions/{id}", async (
