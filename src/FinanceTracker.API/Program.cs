@@ -1,6 +1,7 @@
 using FinanceTracker.Application.Accounts.Commands.CreateAccount;
 using FinanceTracker.Application.Categories.Commands.CreateCategory;
 using FinanceTracker.Application.Common.Interfaces;
+using FinanceTracker.Application.Statistics.Queries.GetStatistics;
 using FinanceTracker.Application.Transactions.Commands.CreateTransaction;
 using FinanceTracker.Application.Transactions.Commands.DeleteTransaction;
 using FinanceTracker.Application.Transactions.Commands.UpdateTransaction;
@@ -64,6 +65,15 @@ app.MapGet("/transactions/{id}", async (
         new GetTransactionByIdQuery(id));
 
     return Results.Ok(transaction);
+});
+
+app.MapGet("/statistics", async (
+    IMediator mediator) =>
+{
+    var result = await mediator.Send(
+        new GetStatisticsQuery());
+
+    return Results.Ok(result);
 });
 
 app.MapGet("/accounts", async (IAppDbContext db) =>
