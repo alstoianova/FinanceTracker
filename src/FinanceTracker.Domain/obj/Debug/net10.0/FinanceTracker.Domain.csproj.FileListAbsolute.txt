@@ -9,3 +9,4 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/refint/FinanceTracker.Domain.dll
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.pdb
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/ref/FinanceTracker.Domain.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Domain/obj/Debug/net10.0/FinanceTracker.Domain.sourcelink.json

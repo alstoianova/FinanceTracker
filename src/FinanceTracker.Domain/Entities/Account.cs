@@ -10,9 +10,5 @@ public class Account
 
     public string Currency { get; set; } = string.Empty;
 
-    public Guid UserId { get; set; }
-
-    public User User { get; set; }
-
     public List<Transaction> Transactions { get; set; } = new();
 }

@@ -162,3 +162,4 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/obj/Debug/net10.0/FinanceTracker.API.sourcelink.json

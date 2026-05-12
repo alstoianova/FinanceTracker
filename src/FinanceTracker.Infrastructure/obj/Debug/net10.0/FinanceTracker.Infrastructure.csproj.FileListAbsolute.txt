@@ -17,3 +17,4 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Infrastructure/obj/Debug/net10.0/FinanceTracker.Infrastructure.pdb
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Infrastructure/obj/Debug/net10.0/FinanceTracker.Infrastructure.genruntimeconfig.cache
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Infrastructure/obj/Debug/net10.0/ref/FinanceTracker.Infrastructure.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Infrastructure/obj/Debug/net10.0/FinanceTracker.Infrastructure.sourcelink.json
