@@ -4,6 +4,7 @@ using FinanceTracker.Application.Categories.Commands.CreateCategory;
 using FinanceTracker.Application.Common.Behaviors;
 using FinanceTracker.Application.Common.Interfaces;
 using FinanceTracker.Application.Statistics.Queries.GetStatistics;
+using FinanceTracker.Application.Summary.Queries.GetSummaryStatistics;
 using FinanceTracker.Application.Summary.Queries.GetTotalBalance;
 using FinanceTracker.Application.Transactions.Commands.CreateTransaction;
 using FinanceTracker.Application.Transactions.Commands.DeleteTransaction;
@@ -93,6 +94,15 @@ app.MapGet("/summary/balance", async (
 {
     var result = await mediator.Send(
         new GetTotalBalanceQuery());
+
+    return Results.Ok(result);
+});
+
+app.MapGet("/summary/statistics", async (
+    IMediator mediator) =>
+{
+    var result = await mediator.Send(
+        new GetSummaryStatisticsQuery());
 
     return Results.Ok(result);
 });
