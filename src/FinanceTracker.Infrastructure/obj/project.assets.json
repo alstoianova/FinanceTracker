@@ -1082,6 +1082,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "FinanceTracker.Domain": "1.0.0",
+          "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "11.1.0",
           "Microsoft.EntityFrameworkCore": "10.0.7"

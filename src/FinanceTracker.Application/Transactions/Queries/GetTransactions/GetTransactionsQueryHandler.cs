@@ -1,12 +1,12 @@
 using FinanceTracker.Application.Common.Interfaces;
-using FinanceTracker.Domain.Entities;
+using FinanceTracker.Application.Transactions.DTOs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinanceTracker.Application.Transactions.Queries.GetTransactions;
 
 public class GetTransactionsQueryHandler
-    : IRequestHandler<GetTransactionsQuery, List<Transaction>>
+    : IRequestHandler<GetTransactionsQuery, List<TransactionDto>>
 {
     private readonly IAppDbContext _context;
 
@@ -15,7 +15,7 @@ public class GetTransactionsQueryHandler
         _context = context;
     }
 
-    public async Task<List<Transaction>> Handle(
+    public async Task<List<TransactionDto>> Handle(
         GetTransactionsQuery request,
         CancellationToken cancellationToken)
     {
@@ -39,6 +39,21 @@ public class GetTransactionsQueryHandler
             query = query.Where(t => t.CategoryId == request.CategoryId.Value);
         }
 
-        return await query.ToListAsync(cancellationToken);
+        if (!string.IsNullOrWhiteSpace(request.Type))
+        {
+            query = query.Where(t => t.Category.Name == request.Type);
+        }
+
+        return await query
+            .Select(t => new TransactionDto
+            {
+                Id = t.Id,
+                Amount = t.Amount,
+                Date = t.Date,
+                Type = t.Category.Name,
+                AccountName = t.Account.Name,
+                CategoryName = t.Category.Name
+            })
+            .ToListAsync(cancellationToken);
     }
 }

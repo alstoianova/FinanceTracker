@@ -1,13 +1,17 @@
+using FinanceTracker.API.Middleware;
 using FinanceTracker.Application.Accounts.Commands.CreateAccount;
 using FinanceTracker.Application.Categories.Commands.CreateCategory;
+using FinanceTracker.Application.Common.Behaviors;
 using FinanceTracker.Application.Common.Interfaces;
 using FinanceTracker.Application.Statistics.Queries.GetStatistics;
+using FinanceTracker.Application.Summary.Queries.GetTotalBalance;
 using FinanceTracker.Application.Transactions.Commands.CreateTransaction;
 using FinanceTracker.Application.Transactions.Commands.DeleteTransaction;
 using FinanceTracker.Application.Transactions.Commands.UpdateTransaction;
 using FinanceTracker.Application.Transactions.Queries.GetTransactionById;
 using FinanceTracker.Application.Transactions.Queries.GetTransactions;
 using FinanceTracker.Infrastructure.Persistence;
+using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
@@ -25,6 +29,12 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 
 builder.Services.AddMediatR(typeof(CreateTransactionCommand));
 
+builder.Services.AddValidatorsFromAssemblyContaining<CreateTransactionCommandValidator>();
+
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(ValidationBehavior<,>));
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(
         builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -33,6 +43,8 @@ builder.Services.AddScoped<IAppDbContext>(provider =>
     provider.GetRequiredService<AppDbContext>());
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -72,6 +84,15 @@ app.MapGet("/statistics", async (
 {
     var result = await mediator.Send(
         new GetStatisticsQuery());
+
+    return Results.Ok(result);
+});
+
+app.MapGet("/summary/balance", async (
+    IMediator mediator) =>
+{
+    var result = await mediator.Send(
+        new GetTotalBalanceQuery());
 
     return Results.Ok(result);
 });

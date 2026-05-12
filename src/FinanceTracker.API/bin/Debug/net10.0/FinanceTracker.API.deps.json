@@ -10,6 +10,7 @@
         "dependencies": {
           "FinanceTracker.Application": "1.0.0",
           "FinanceTracker.Infrastructure": "1.0.0",
+          "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.7",
           "Microsoft.EntityFrameworkCore.Design": "10.0.7",
@@ -771,6 +772,7 @@
       "FinanceTracker.Application/1.0.0": {
         "dependencies": {
           "FinanceTracker.Domain": "1.0.0",
+          "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "11.1.0",
           "Microsoft.EntityFrameworkCore": "10.0.7"
