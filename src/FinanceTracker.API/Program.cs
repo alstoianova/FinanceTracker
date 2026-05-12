@@ -4,6 +4,7 @@ using FinanceTracker.Application.Common.Interfaces;
 using FinanceTracker.Application.Transactions.Commands.CreateTransaction;
 using FinanceTracker.Application.Transactions.Commands.DeleteTransaction;
 using FinanceTracker.Application.Transactions.Commands.UpdateTransaction;
+using FinanceTracker.Application.Transactions.Queries.GetTransactionById;
 using FinanceTracker.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,16 @@ app.MapGet("/transactions", async (AppDbContext db) =>
         .Include(t => t.Account)
         .Include(t => t.Category)
         .ToListAsync();
+});
+
+app.MapGet("/transactions/{id}", async (
+    Guid id,
+    IMediator mediator) =>
+{
+    var transaction = await mediator.Send(
+        new GetTransactionByIdQuery(id));
+
+    return Results.Ok(transaction);
 });
 
 app.MapGet("/accounts", async (IAppDbContext db) =>
