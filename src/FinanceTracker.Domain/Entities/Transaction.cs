@@ -10,9 +10,11 @@ public class Transaction
 
     public DateTime Date { get; set; }
 
+    public string Type { get; set; } = string.Empty;
+
     public Guid AccountId { get; set; }
 
-    public Account Account { get; set; } = null!;
+    public Account? Account { get; set; }
 
     public Guid? CategoryId { get; set; }
 

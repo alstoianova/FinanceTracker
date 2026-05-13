@@ -1,7 +1,49 @@
 ﻿@page "/"
+@using System.Net.Http.Json
+@inject HttpClient Http
 
-<PageTitle>Home</PageTitle>
+<h1>Finance Tracker</h1>
 
-<h1>Hello, world!</h1>
+<h3>Total Balance</h3>
 
-Welcome to your new app.
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p style="color:red">@errorMessage</p>
+}
+else if (statistics is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <p><strong>Income:</strong> @statistics.TotalIncome</p>
+    <p><strong>Expense:</strong> @statistics.TotalExpense</p>
+    <p><strong>Balance:</strong> @statistics.Balance</p>
+}
+
+@code {
+    private SummaryStatisticsDto? statistics;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            statistics = await Http.GetFromJsonAsync<SummaryStatisticsDto>(
+                "http://localhost:5228/summary/statistics");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+    }
+
+    public class SummaryStatisticsDto
+    {
+        public decimal TotalIncome { get; set; }
+
+        public decimal TotalExpense { get; set; }
+
+        public decimal Balance { get; set; }
+    }
+}

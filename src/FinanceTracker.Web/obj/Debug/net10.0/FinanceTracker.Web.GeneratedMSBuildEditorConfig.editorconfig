@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Accounts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Categories.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTm90Rm91bmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Transactions.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVHJhbnNhY3Rpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Weather.razor]

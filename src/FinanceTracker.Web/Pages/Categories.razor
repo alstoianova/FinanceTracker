@@ -1,0 +1,99 @@
+@page "/categories"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<h1>Categories</h1>
+
+<h3>Create Category</h3>
+
+<input placeholder="Name"
+       @bind="newCategory.Name" />
+
+<select @bind="newCategory.Type">
+    <option value="Income">
+        Income
+    </option>
+
+    <option value="Expense">
+        Expense
+    </option>
+</select>
+
+<button @onclick="CreateCategory">
+    Create
+</button>
+
+<hr />
+
+@if (categories is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    @foreach (var category in categories)
+    {
+        <div style="border:1px solid gray;
+                    padding:10px;
+                    margin-bottom:10px;">
+
+            <h4>@category.Name</h4>
+
+            <p>
+                Type: @category.Type
+            </p>
+
+        </div>
+    }
+}
+
+@code {
+
+    private List<CategoryDto>? categories;
+
+    private CreateCategoryRequest newCategory =
+        new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadCategories();
+    }
+
+    private async Task LoadCategories()
+    {
+        categories =
+            await Http.GetFromJsonAsync<List<CategoryDto>>(
+                "http://localhost:5228/categories");
+    }
+
+    private async Task CreateCategory()
+    {
+        var response =
+            await Http.PostAsJsonAsync(
+                "http://localhost:5228/categories",
+                newCategory);
+
+        if (response.IsSuccessStatusCode)
+        {
+            newCategory = new();
+
+            await LoadCategories();
+        }
+    }
+
+    public class CategoryDto
+    {
+        public Guid Id { get; set; }
+
+        public string Name { get; set; } = "";
+
+        public string Type { get; set; } = "";
+    }
+
+    public class CreateCategoryRequest
+    {
+        public string Name { get; set; } = "";
+
+        public string Type { get; set; } = "Expense";
+    }
+}

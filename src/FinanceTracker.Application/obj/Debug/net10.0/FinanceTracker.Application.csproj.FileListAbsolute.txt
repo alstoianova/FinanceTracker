@@ -8,9 +8,9 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.AssemblyInfoInputs.cache
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.AssemblyInfo.cs
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.csproj.CoreCompileInputs.cache
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.sourcelink.json
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceT.00C3F739.Up2Date
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.dll
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/refint/FinanceTracker.Application.dll
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.pdb
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/ref/FinanceTracker.Application.dll
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Application/obj/Debug/net10.0/FinanceTracker.Application.sourcelink.json

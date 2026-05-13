@@ -207,9 +207,6 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.2hqev0d0wt.wasm
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.jpnnvb4sp3.pdb
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/dotnet.oqjlnw92gh.js
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/blazor.webassembly.zxhwjtv6sc.js.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.y0sndbe2xe.wasm.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/Microsoft.AspNetCore.Components.09qh35fcip.wasm.gz
@@ -418,9 +415,6 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.2hqev0d0wt.wasm.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.jpnnvb4sp3.pdb.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/dotnet.oqjlnw92gh.js.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/FinanceTracker.Web.staticwebassets.runtime.json
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/FinanceTracker.Web.staticwebassets.endpoints.json
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/FinanceTracker.Web.dll
@@ -642,6 +636,7 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/FinanceTracker.Web.AssemblyInfo.cs
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/FinanceTracker.Web.csproj.CoreCompileInputs.cache
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/FinanceTracker.Web.MvcApplicationPartsAssemblyInfo.cache
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/FinanceTracker.Web.sourcelink.json
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/webcil/Microsoft.AspNetCore.Authorization.wasm
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/webcil/Microsoft.AspNetCore.Components.wasm
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/webcil/Microsoft.AspNetCore.Components.Forms.wasm
@@ -1110,10 +1105,6 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/8k2eglbdhk-{0}-tjcz0u77k5-tjcz0u77k5.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/mo7fmj39lt-{0}-tptq2av103-tptq2av103.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/74hwubcqbi-{0}-lfu7j35m59-lfu7j35m59.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/bpbtedzcv1-{0}-2hqev0d0wt-2hqev0d0wt.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/zjtn32i6z2-{0}-jpnnvb4sp3-jpnnvb4sp3.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/yts9l8rot6-{0}-oqjlnw92gh-oqjlnw92gh.gz
-/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/ijto1wjdzn-{0}-2lwe2lny4j-2lwe2lny4j.gz
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/staticwebassets.build.json
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/staticwebassets.build.json.cache
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/staticwebassets.development.json
@@ -1124,3 +1115,13 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/refint/FinanceTracker.Web.dll
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/FinanceTracker.Web.pdb
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/ref/FinanceTracker.Web.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.hqr3scrl2s.wasm
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.2oorb9z7y6.pdb
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/dotnet.gp605j6ffh.js
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.hqr3scrl2s.wasm.gz
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/FinanceTracker.Web.2oorb9z7y6.pdb.gz
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/bin/Debug/net10.0/wwwroot/_framework/dotnet.gp605j6ffh.js.gz
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/bpbtedzcv1-{0}-hqr3scrl2s-hqr3scrl2s.gz
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/zjtn32i6z2-{0}-2oorb9z7y6-2oorb9z7y6.gz
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/yts9l8rot6-{0}-gp605j6ffh-gp605j6ffh.gz
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/obj/Debug/net10.0/compressed/ijto1wjdzn-{0}-917ohywsc6-917ohywsc6.gz

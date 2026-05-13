@@ -1,0 +1,225 @@
+@page "/transactions"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<h1>Transactions</h1>
+
+<h3>Create Transaction</h3>
+
+<input type="number"
+       placeholder="Amount"
+       @bind="newTransaction.Amount" />
+
+<input placeholder="Description"
+       @bind="newTransaction.Description" />
+
+<br />
+<br />
+
+<select @bind="newTransaction.Type">
+    <option value="Income">Income</option>
+    <option value="Expense">Expense</option>
+</select>
+
+<select @bind="newTransaction.AccountId">
+    @foreach (var account in accounts)
+    {
+        <option value="@account.Id">
+            @account.Name
+        </option>
+    }
+</select>
+
+<select @bind="newTransaction.CategoryId">
+    @foreach (var category in categories)
+    {
+        <option value="@category.Id">
+            @category.Name
+        </option>
+    }
+</select>
+
+<button @onclick="async () => await CreateTransaction()">
+    Create
+</button>
+
+<hr />
+
+@if (transactions is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    @foreach (var transaction in transactions)
+    {
+        <div style="border:1px solid gray;
+                    padding:10px;
+                    margin-bottom:10px;">
+
+            <h4>@transaction.Amount MDL</h4>
+
+            <p>
+                Type: @transaction.Type
+            </p>
+
+            <p>
+                Description: @transaction.Description
+            </p>
+
+            <p>
+                Account: @transaction.AccountName
+            </p>
+
+            <p>
+                Category: @transaction.CategoryName
+            </p>
+
+        </div>
+    }
+}
+
+@code {
+
+    private List<TransactionDto>? transactions;
+
+    private List<AccountDto> accounts = new();
+
+    private List<CategoryDto> categories = new();
+
+    private CreateTransactionRequest newTransaction =
+        new()
+        {
+            Type = "Expense",
+            Date = DateTime.UtcNow
+        };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTransactions();
+
+        accounts =
+            await Http.GetFromJsonAsync<List<AccountDto>>(
+                "http://localhost:5228/accounts")
+            ?? new();
+
+        categories =
+            await Http.GetFromJsonAsync<List<CategoryDto>>(
+                "http://localhost:5228/categories")
+            ?? new();
+
+        if (accounts.Any())
+        {
+            newTransaction.AccountId =
+                accounts.First().Id;
+        }
+
+        if (categories.Any())
+        {
+            newTransaction.CategoryId =
+                categories.First().Id;
+        }
+    }
+
+    private async Task LoadTransactions()
+    {
+        transactions =
+            await Http.GetFromJsonAsync<List<TransactionDto>>(
+                "http://localhost:5228/transactions");
+    }
+
+    private async Task CreateTransaction()
+    {
+        Console.WriteLine("BUTTON CLICKED");
+
+        try
+        {
+            var response =
+                await Http.PostAsJsonAsync(
+                    "http://localhost:5228/transactions",
+                    newTransaction);
+
+            if (response.IsSuccessStatusCode)
+            {
+                await LoadTransactions();
+
+                newTransaction = new()
+                {
+                    Type = "Expense",
+                    Date = DateTime.UtcNow
+                };
+
+                if (accounts.Any())
+                {
+                    newTransaction.AccountId =
+                        accounts.First().Id;
+                }
+
+                if (categories.Any())
+                {
+                    newTransaction.CategoryId =
+                        categories.First().Id;
+                }
+
+                StateHasChanged();
+            }
+            else
+            {
+                var error =
+                    await response.Content.ReadAsStringAsync();
+
+                Console.WriteLine(error);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    public class TransactionDto
+    {
+        public Guid Id { get; set; }
+
+        public decimal Amount { get; set; }
+
+        public string Description { get; set; } = "";
+
+        public string Type { get; set; } = "";
+
+        public string AccountName { get; set; } = "";
+
+        public string CategoryName { get; set; } = "";
+
+        public DateTime Date { get; set; }
+    }
+
+    public class AccountDto
+    {
+        public Guid Id { get; set; }
+
+        public string Name { get; set; } = "";
+    }
+
+    public class CategoryDto
+    {
+        public Guid Id { get; set; }
+
+        public string Name { get; set; } = "";
+    }
+
+    public class CreateTransactionRequest
+    {
+        public decimal Amount { get; set; }
+
+        public string Description { get; set; } = "";
+
+        public string Type { get; set; } = "Expense";
+
+        public Guid AccountId { get; set; }
+
+        public Guid CategoryId { get; set; }
+
+        public DateTime Date { get; set; }
+    }
+}

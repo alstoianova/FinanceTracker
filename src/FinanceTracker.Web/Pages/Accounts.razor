@@ -1,0 +1,98 @@
+@page "/accounts"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<h1>Accounts</h1>
+
+<h3>Create Account</h3>
+
+<input placeholder="Name"
+       @bind="newAccount.Name" />
+
+<input placeholder="Currency"
+       @bind="newAccount.Currency" />
+
+<button @onclick="CreateAccount">
+    Create
+</button>
+
+<hr />
+
+@if (accounts is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    @foreach (var account in accounts)
+    {
+        <div style="border:1px solid gray;
+                    padding:10px;
+                    margin-bottom:10px;">
+
+            <h4>@account.Name</h4>
+
+            <p>
+                Currency: @account.Currency
+            </p>
+
+            <p>
+                Balance: @account.Balance
+            </p>
+
+        </div>
+    }
+}
+
+@code {
+
+    private List<AccountDto>? accounts;
+
+    private CreateAccountRequest newAccount =
+        new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAccounts();
+    }
+
+    private async Task LoadAccounts()
+    {
+        accounts =
+            await Http.GetFromJsonAsync<List<AccountDto>>(
+                "http://localhost:5228/accounts");
+    }
+
+    private async Task CreateAccount()
+    {
+        var response =
+            await Http.PostAsJsonAsync(
+                "http://localhost:5228/accounts",
+                newAccount);
+
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadAccounts();
+
+            newAccount = new();
+        }
+    }
+
+    public class AccountDto
+    {
+        public Guid Id { get; set; }
+
+        public string Name { get; set; } = "";
+
+        public string Currency { get; set; } = "";
+
+        public decimal Balance { get; set; }
+    }
+
+    public class CreateAccountRequest
+    {
+        public string Name { get; set; } = "";
+
+        public string Currency { get; set; } = "";
+    }
+}
