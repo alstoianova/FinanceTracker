@@ -54,18 +54,29 @@ public class TransactionsController : ControllerBase
 
             await _db.SaveChangesAsync();
 
-            return Ok(new
-            {
-                transaction.Id,
-                transaction.Amount,
-                transaction.Description,
-                transaction.Type,
-                transaction.Date
-            });
+            return Ok(transaction);
         }
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
         }
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var transaction =
+            await _db.Transactions.FindAsync(id);
+
+        if (transaction == null)
+        {
+            return NotFound();
+        }
+
+        _db.Transactions.Remove(transaction);
+
+        await _db.SaveChangesAsync();
+
+        return Ok();
     }
 }
