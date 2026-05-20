@@ -163,3 +163,12 @@
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/obj/Debug/net10.0/FinanceTracker.API.pdb
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/obj/Debug/net10.0/FinanceTracker.API.genruntimeconfig.cache
 /Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/obj/Debug/net10.0/ref/FinanceTracker.API.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/BCrypt-Net-Next.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.IdentityModel.Logging.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/Microsoft.IdentityModel.Tokens.dll
+/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/bin/Debug/net10.0/System.IdentityModel.Tokens.Jwt.dll
