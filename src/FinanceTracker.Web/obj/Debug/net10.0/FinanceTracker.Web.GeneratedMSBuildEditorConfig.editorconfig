@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTm90Rm91bmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Summary.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3VtbWFyeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Web/Pages/Transactions.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVHJhbnNhY3Rpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

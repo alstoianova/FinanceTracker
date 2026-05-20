@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.light-theme {
+    background: #f3f4f6;
+    color: black;
+    min-height: 100vh;
+}
+
+.dark-theme {
+    background: linear-gradient(180deg, #020617 0%, #111827 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+.dark-theme .top-row {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dark-theme .sidebar {
+    background: linear-gradient(180deg, #0f172a 0%, #3b0764 100%);
+}
+
+.dark-theme .sidebar a {
+    color: white !important;
+}
+
+.dark-theme input,
+.dark-theme select {
+    background: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+}
+
+.dark-theme .theme-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.dark-theme div[style*="background:white"] {
+    background: #0f172a !important;
+    color: white !important;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme p,
+.dark-theme span,
+.dark-theme label {
+    color: white !important;
+}
+/* CARD ANIMATIONS */
+
+.summary-card,
+.transaction-card,
+.category-card,
+.month-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.summary-card:hover,
+.transaction-card:hover,
+.category-card:hover,
+.month-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* BUTTON */
+
+button {
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+/* INPUTS */
+
+input,
+select {
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}

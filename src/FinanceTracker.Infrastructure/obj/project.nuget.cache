@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CTksRiM69JQ=",
+  "dgSpecHash": "3bGdD3tcASk=",
   "success": true,
   "projectFilePath": "/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.Infrastructure/FinanceTracker.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/aliona/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512",
     "/Users/aliona/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
     "/Users/aliona/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "/Users/aliona/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

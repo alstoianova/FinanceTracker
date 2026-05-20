@@ -2,7 +2,68 @@
 @using System.Net.Http.Json
 @inject HttpClient Http
 @inject NavigationManager Navigation
+
 <h1>Transactions</h1>
+
+<div style="
+    display:flex;
+    gap:12px;
+    margin-bottom:24px;
+    flex-wrap:wrap;">
+
+    <button
+        @onclick='() => SetFilter("All")'
+        style="
+            padding:10px 18px;
+            border:none;
+            border-radius:10px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-weight:600;">
+        All
+    </button>
+
+    <button
+        @onclick='() => SetFilter("Today")'
+        style="
+            padding:10px 18px;
+            border:none;
+            border-radius:10px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-weight:600;">
+        Today
+    </button>
+
+    <button
+        @onclick='() => SetFilter("Week")'
+        style="
+            padding:10px 18px;
+            border:none;
+            border-radius:10px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-weight:600;">
+        Last 7 Days
+    </button>
+
+    <button
+        @onclick='() => SetFilter("Month")'
+        style="
+            padding:10px 18px;
+            border:none;
+            border-radius:10px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-weight:600;">
+        This Month
+    </button>
+
+</div>
 
 <div style="
     display:flex;
@@ -10,7 +71,7 @@
     margin-bottom:30px;
     flex-wrap:wrap;">
 
-    <div style="
+    <div class="summary-card" style="
         background:white;
         padding:20px;
         border-radius:12px;
@@ -25,7 +86,7 @@
 
     </div>
 
-    <div style="
+    <div class="summary-card" style="
         background:white;
         padding:20px;
         border-radius:12px;
@@ -40,7 +101,7 @@
 
     </div>
 
-    <div style="
+    <div class="summary-card" style="
         background:white;
         padding:20px;
         border-radius:12px;
@@ -122,6 +183,19 @@
 
 <h3>Filters</h3>
 
+<input
+    type="text"
+    placeholder="Search transaction..."
+    @bind="searchText"
+    style="
+        padding:10px;
+        width:250px;
+        margin-bottom:20px;
+        border-radius:8px;
+        border:1px solid #ccc;" />
+
+<br />
+
 <select @bind="selectedType"
         style="padding:8px; margin-bottom:20px;">
 
@@ -139,16 +213,17 @@
 }
 else
 {
-    @foreach (var transaction in filteredTransactions)
-{
-    <div @key="transaction.Id"
-         style="
-            border:1px solid #dcdcdc;
-            border-radius:12px;
-            padding:20px;
-            margin-bottom:15px;
-            background-color:white;
-            box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+    @foreach (var transaction in FilteredTransactions)
+    {
+        <div class="transaction-card"
+             @key="transaction.Id"
+             style="
+                border:1px solid #dcdcdc;
+                border-radius:12px;
+                padding:20px;
+                margin-bottom:15px;
+                background-color:white;
+                box-shadow:0 2px 8px rgba(0,0,0,0.05);">
 
             <h3 style="
                 color:@(transaction.Type == "Income"
@@ -185,95 +260,6 @@ else
                 @transaction.Date.ToString("dd.MM.yyyy HH:mm")
             </p>
 
-            <div style="display:flex; gap:10px; margin-top:15px;">
-
-                <button
-                    style="
-                        background-color:#2563eb;
-                        color:white;
-                        border:none;
-                        padding:8px 14px;
-                        border-radius:8px;
-                        cursor:pointer;"
-                    @onclick="() => StartEdit(transaction)">
-
-                    Edit
-
-                </button>
-
-                <button
-                    style="
-                        background-color:#dc3545;
-                        color:white;
-                        border:none;
-                        padding:8px 14px;
-                        border-radius:8px;
-                        cursor:pointer;"
-                    @onclick="() => DeleteTransaction(transaction.Id)">
-
-                    Delete
-
-                </button>
-
-            </div>
-
-            @if (editingTransactionId == transaction.Id)
-            {
-                <div style="
-                    margin-top:20px;
-                    padding:15px;
-                    border:1px solid #dcdcdc;
-                    border-radius:10px;
-                    background:#f9fafb;">
-
-                    <input type="number"
-                           @bind="editTransaction.Amount"
-                           style="padding:8px; margin-right:10px;" />
-
-                    <input
-                        @bind="editTransaction.Description"
-                        style="padding:8px; margin-right:10px;" />
-
-                    <br />
-                    <br />
-
-                    <select @bind="editTransaction.Type"
-                            style="padding:8px; margin-right:10px;">
-
-                        <option value="Income">Income</option>
-                        <option value="Expense">Expense</option>
-
-                    </select>
-
-                    <select @bind="editTransaction.CategoryId"
-                            style="padding:8px; margin-right:10px;">
-
-                        @foreach (var category in categories)
-                        {
-                            <option value="@category.Id">
-                                @category.Name
-                            </option>
-                        }
-
-                    </select>
-
-                    <button
-                        style="
-                            background-color:#16a34a;
-                            color:white;
-                            border:none;
-                            padding:8px 14px;
-                            border-radius:8px;
-                            cursor:pointer;"
-                        @onclick="SaveEdit">
-
-                        Save
-
-                    </button>
-
-                </div>
-            }
-
         </div>
     }
 }
@@ -288,10 +274,9 @@ else
 
     private string selectedType = "All";
 
-    private Guid? editingTransactionId = null;
+    private string searchText = "";
 
-    private EditTransactionRequest editTransaction =
-    new EditTransactionRequest();
+    private string currentFilter = "All";
 
     private decimal TotalIncome =>
         transactions?
@@ -308,23 +293,60 @@ else
     private decimal TotalBalance =>
         TotalIncome - TotalExpense;
 
-    private IEnumerable<TransactionDto> filteredTransactions
+    private List<TransactionDto> FilteredTransactions
     {
         get
         {
             if (transactions == null)
             {
-                return Enumerable.Empty<TransactionDto>();
+                return new();
             }
 
-            if (selectedType == "All")
+            var result = transactions.AsQueryable();
+
+            result = currentFilter switch
             {
-                return transactions;
-            }
+                "Today" =>
+                    result.Where(t =>
+                        t.Date.Date == DateTime.Now.Date),
 
-            return transactions.Where(t =>
-                t.Type == selectedType);
+                "Week" =>
+                    result.Where(t =>
+                        t.Date >= DateTime.Now.AddDays(-7)),
+
+                "Month" =>
+                    result.Where(t =>
+                        t.Date.Month == DateTime.Now.Month
+                        &&
+                        t.Date.Year == DateTime.Now.Year),
+
+                _ => result
+            };
+
+            result = result.Where(t =>
+                (selectedType == "All"
+                 || t.Type == selectedType)
+
+                &&
+
+                (string.IsNullOrWhiteSpace(searchText)
+                 || t.Description.Contains(
+                        searchText,
+                        StringComparison.OrdinalIgnoreCase)
+                 || t.CategoryName.Contains(
+                        searchText,
+                        StringComparison.OrdinalIgnoreCase)
+                 || t.AccountName.Contains(
+                        searchText,
+                        StringComparison.OrdinalIgnoreCase)));
+
+            return result.ToList();
         }
+    }
+
+    private void SetFilter(string filter)
+    {
+        currentFilter = filter;
     }
 
     private CreateTransactionRequest newTransaction =
@@ -336,7 +358,10 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadTransactions();
+        transactions =
+            await Http.GetFromJsonAsync<List<TransactionDto>>(
+                "http://localhost:5228/transactions")
+            ?? new();
 
         accounts =
             await Http.GetFromJsonAsync<List<AccountDto>>(
@@ -347,163 +372,19 @@ else
             await Http.GetFromJsonAsync<List<CategoryDto>>(
                 "http://localhost:5228/categories")
             ?? new();
-
-        if (accounts.Any())
-        {
-            newTransaction.AccountId =
-                accounts.First().Id;
-        }
-
-        if (categories.Any())
-        {
-            newTransaction.CategoryId =
-                categories.First().Id;
-        }
     }
 
-    private async Task LoadTransactions()
+    private async Task CreateTransaction()
     {
-        try
-        {
-            transactions =
-                await Http.GetFromJsonAsync<List<TransactionDto>>(
-                    "http://localhost:5228/transactions")
-                ?? new();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
+        await Http.PostAsJsonAsync(
+            "http://localhost:5228/transactions",
+            newTransaction);
 
-            transactions = new();
-        }
-    }
+        transactions =
+            await Http.GetFromJsonAsync<List<TransactionDto>>(
+                "http://localhost:5228/transactions");
 
-  private async Task CreateTransaction()
-{
-    try
-    {
-        newTransaction.Date = DateTime.UtcNow;
-
-        var response =
-            await Http.PostAsJsonAsync(
-                "http://localhost:5228/transactions",
-                newTransaction);
-
-        if (response.IsSuccessStatusCode)
-        {
-            await LoadTransactions();
-
-            newTransaction = new()
-            {
-                Type = "Expense",
-                Date = DateTime.UtcNow
-            };
-
-            if (accounts.Any())
-            {
-                newTransaction.AccountId =
-                    accounts.First().Id;
-            }
-
-            if (categories.Any())
-            {
-                newTransaction.CategoryId =
-                    categories.First().Id;
-            }
-
-            await InvokeAsync(StateHasChanged);
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine(ex.Message);
-    }
-}
-
-    private void StartEdit(TransactionDto transaction)
-{
-    editingTransactionId = transaction.Id;
-
-    var category =
-        categories.FirstOrDefault(c =>
-            c.Name == transaction.CategoryName);
-
-    var account =
-        accounts.FirstOrDefault(a =>
-            a.Name == transaction.AccountName);
-
-  editTransaction = new EditTransactionRequest
-    {
-        Amount = transaction.Amount,
-        Description = transaction.Description,
-        Type = transaction.Type,
-        CategoryId = category?.Id ?? Guid.Empty,
-        AccountId = account?.Id ?? Guid.Empty
-    };
-}
-
- private async Task SaveEdit()
-{
-    if (editingTransactionId == null)
-    {
-        return;
-    }
-
-    try
-    {
-        var response =
-            await Http.PutAsJsonAsync(
-                $"http://localhost:5228/transactions/{editingTransactionId}",
-                editTransaction);
-
-        if (response.IsSuccessStatusCode)
-        {
-            // вручную обновляем объект в списке
-            var transaction =
-                transactions?.FirstOrDefault(t =>
-                    t.Id == editingTransactionId);
-
-            if (transaction != null)
-            {
-                transaction.Amount =
-                    editTransaction.Amount;
-
-                transaction.Description =
-                    editTransaction.Description;
-
-                transaction.Type =
-                    editTransaction.Type;
-
-                var category =
-                    categories.FirstOrDefault(c =>
-                        c.Id == editTransaction.CategoryId);
-
-                transaction.CategoryName =
-                    category?.Name ?? "";
-            }
-
-            editingTransactionId = null;
-
-            StateHasChanged();
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine(ex.Message);
-    }
-}
-
-
-    private async Task DeleteTransaction(Guid id)
-    {
-        var response =
-            await Http.DeleteAsync(
-                $"http://localhost:5228/transactions/{id}");
-
-        if (response.IsSuccessStatusCode)
-        {
-            await LoadTransactions();
-        }
+        StateHasChanged();
     }
 
     public class TransactionDto
@@ -551,16 +432,4 @@ else
 
         public DateTime Date { get; set; }
     }
-    public class EditTransactionRequest
-{
-    public decimal Amount { get; set; }
-
-    public string Description { get; set; } = "";
-
-    public string Type { get; set; } = "Expense";
-
-    public Guid AccountId { get; set; }
-
-    public Guid CategoryId { get; set; }
-}
 }

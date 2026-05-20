@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yqaf0tVaaYw=",
+  "dgSpecHash": "2mrDdrMBjr4=",
   "success": true,
   "projectFilePath": "/Users/aliona/Documents/FinanceTrackerFull/src/FinanceTracker.API/FinanceTracker.API.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/aliona/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/aliona/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/aliona/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/10.0.8/microsoft.aspnetcore.authentication.jwtbearer.10.0.8.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.aspnetcore.openapi/10.0.7/microsoft.aspnetcore.openapi.10.0.7.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.build.framework/18.0.2/microsoft.build.framework.18.0.2.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.codeanalysis.analyzers/3.11.0/microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
@@ -28,6 +29,12 @@
     "/Users/aliona/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/10.0.7/microsoft.entityframeworkcore.sqlite.core.10.0.7.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.extensions.apidescription.server/10.0.0/microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.extensions.dependencymodel/10.0.7/microsoft.extensions.dependencymodel.10.0.7.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.identitymodel.abstractions/8.0.1/microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.0.1/microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.identitymodel.logging/8.0.1/microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.identitymodel.protocols/8.0.1/microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/microsoft.identitymodel.tokens/8.0.1/microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.openapi/2.4.1/microsoft.openapi.2.4.1.nupkg.sha512",
     "/Users/aliona/.nuget/packages/microsoft.visualstudio.solutionpersistence/1.0.52/microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
     "/Users/aliona/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
@@ -48,7 +55,8 @@
     "/Users/aliona/.nuget/packages/system.composition.convention/9.0.0/system.composition.convention.9.0.0.nupkg.sha512",
     "/Users/aliona/.nuget/packages/system.composition.hosting/9.0.0/system.composition.hosting.9.0.0.nupkg.sha512",
     "/Users/aliona/.nuget/packages/system.composition.runtime/9.0.0/system.composition.runtime.9.0.0.nupkg.sha512",
-    "/Users/aliona/.nuget/packages/system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg.sha512"
+    "/Users/aliona/.nuget/packages/system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg.sha512",
+    "/Users/aliona/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
   ],
   "logs": []
 }

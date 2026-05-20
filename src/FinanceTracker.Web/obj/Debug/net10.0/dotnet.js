@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "FinanceTracker.Web",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-65LBQftNLAjZDJeaOTzhuHdmzj240HVBFZcH5QEouuA=",
+    "hash": "sha256-/VWDJysvDXBiUWF5JUrb8ao3j93lOv+LP3y+qz1mk4Q=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.mx9wzm9o5h.js"
@@ -58,6 +58,30 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       }
     ],
     "assembly": [
+      {
+        "virtualPath": "Blazorise.wasm",
+        "name": "Blazorise.4oyn44snlb.wasm",
+        "integrity": "sha256-RKOQuEJpYF8onKjts7Kbsk0hgHFi8K6ZlZvIBimZtGo=",
+        "cache": "force-cache"
+      },
+      {
+        "virtualPath": "Blazorise.Charts.wasm",
+        "name": "Blazorise.Charts.gm6l7gjdjv.wasm",
+        "integrity": "sha256-yCsjUdlfMegedeFUNlBCDl27YAIgwFdiNIPJs9MKoHI=",
+        "cache": "force-cache"
+      },
+      {
+        "virtualPath": "Blazorise.Licensing.wasm",
+        "name": "Blazorise.Licensing.if1uxg4755.wasm",
+        "integrity": "sha256-vmNGzxXoM2MA6rFUp99OvXbE3FJlYnUDr6zyA1Nc3Xc=",
+        "cache": "force-cache"
+      },
+      {
+        "virtualPath": "Lambda2Js.wasm",
+        "name": "Lambda2Js.s11rboxncj.wasm",
+        "integrity": "sha256-8KaSQQKzkSLxYo0ViQQKmvLoat2EMnYmC4Q2Ft6zU7M=",
+        "cache": "force-cache"
+      },
       {
         "virtualPath": "Microsoft.AspNetCore.Authorization.wasm",
         "name": "Microsoft.AspNetCore.Authorization.y0sndbe2xe.wasm",
@@ -1242,16 +1266,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "FinanceTracker.Web.wasm",
-        "name": "FinanceTracker.Web.ft088wuu1q.wasm",
-        "integrity": "sha256-I55f3hLl/REaqGGIlzVb6LqmfWPSFY0wBJ/qKrjGluA=",
+        "name": "FinanceTracker.Web.rqe11864sy.wasm",
+        "integrity": "sha256-Hd748TllccG3+aEMfUv5HyeELCH12+t+ASnfcPcpVhE=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "FinanceTracker.Web.pdb",
-        "name": "FinanceTracker.Web.kvw4ukzpte.pdb",
-        "integrity": "sha256-kGJefqWOakDpBpPwUJmWtsJohz8a95SbyNCGuZ6lvUY=",
+        "name": "FinanceTracker.Web.rj3sqqazmg.pdb",
+        "integrity": "sha256-92ICurtNHi4tpWbJe9LW9/kZBDqCeI95vkNhJnZwjcM=",
         "cache": "force-cache"
       }
     ],

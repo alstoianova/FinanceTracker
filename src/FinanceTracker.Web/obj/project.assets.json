@@ -2,6 +2,79 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Blazorise/1.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise.Licensing": "1.2.0",
+          "Microsoft.AspNetCore.Components": "8.0.6",
+          "Microsoft.AspNetCore.Components.Web": "8.0.6",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Blazorise.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Blazorise.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Charts/1.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "1.5.3",
+          "Lambda2Js": "3.1.4",
+          "Microsoft.AspNetCore.Components": "8.0.6",
+          "Microsoft.AspNetCore.Components.Web": "8.0.6",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Blazorise.Charts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Blazorise.Charts.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.Charts.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Charts.props": {}
+        }
+      },
+      "Blazorise.Licensing/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Blazorise.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Blazorise.Licensing.dll": {}
+        }
+      },
+      "Lambda2Js/3.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Lambda2Js.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lambda2Js.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.App.Internal.Assets/10.0.7": {
         "type": "package",
         "build": {
@@ -544,6 +617,79 @@
       }
     },
     "net10.0/browser-wasm": {
+      "Blazorise/1.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise.Licensing": "1.2.0",
+          "Microsoft.AspNetCore.Components": "8.0.6",
+          "Microsoft.AspNetCore.Components.Web": "8.0.6",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Blazorise.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Blazorise.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Charts/1.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "1.5.3",
+          "Lambda2Js": "3.1.4",
+          "Microsoft.AspNetCore.Components": "8.0.6",
+          "Microsoft.AspNetCore.Components.Web": "8.0.6",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Blazorise.Charts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Blazorise.Charts.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.Charts.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Charts.props": {}
+        }
+      },
+      "Blazorise.Licensing/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Blazorise.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Blazorise.Licensing.dll": {}
+        }
+      },
+      "Lambda2Js/3.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Lambda2Js.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lambda2Js.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.App.Internal.Assets/10.0.7": {
         "type": "package",
         "build": {
@@ -1087,6 +1233,125 @@
     }
   },
   "libraries": {
+    "Blazorise/1.5.3": {
+      "sha512": "8HD32080swXuRmYXAKgWk4Ow3afQOVkTDT2zRX7m2GXKAND3CEtGy1DfwYbFAeb+tIxmtd9dg3gsAehlMP6y9w==",
+      "type": "package",
+      "path": "blazorise/1.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.1.5.3.nupkg.sha512",
+        "blazorise.nuspec",
+        "build/Blazorise.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.props",
+        "buildTransitive/Blazorise.props",
+        "lib/net6.0/Blazorise.dll",
+        "lib/net6.0/Blazorise.xml",
+        "lib/net7.0/Blazorise.dll",
+        "lib/net7.0/Blazorise.xml",
+        "lib/net8.0/Blazorise.dll",
+        "lib/net8.0/Blazorise.xml",
+        "staticwebassets/blazorise.css",
+        "staticwebassets/blazorise.min.css",
+        "staticwebassets/breakpoint.js",
+        "staticwebassets/button.js",
+        "staticwebassets/closable.js",
+        "staticwebassets/colorPicker.js",
+        "staticwebassets/datePicker.js",
+        "staticwebassets/dragDrop.js",
+        "staticwebassets/dropdown.js",
+        "staticwebassets/fileEdit.js",
+        "staticwebassets/filePicker.js",
+        "staticwebassets/floatingUi.js",
+        "staticwebassets/inputMask.js",
+        "staticwebassets/io.js",
+        "staticwebassets/memoEdit.js",
+        "staticwebassets/numericPicker.js",
+        "staticwebassets/observer.js",
+        "staticwebassets/table.js",
+        "staticwebassets/textEdit.js",
+        "staticwebassets/theme.js",
+        "staticwebassets/timePicker.js",
+        "staticwebassets/tooltip.js",
+        "staticwebassets/utilities.js",
+        "staticwebassets/validators/DateTimeMaskValidator.js",
+        "staticwebassets/validators/NoValidator.js",
+        "staticwebassets/validators/NumericMaskValidator.js",
+        "staticwebassets/validators/RegExMaskValidator.js",
+        "staticwebassets/vendors/Behave.js",
+        "staticwebassets/vendors/Pickr.js",
+        "staticwebassets/vendors/autoNumeric.js",
+        "staticwebassets/vendors/flatpickr.js",
+        "staticwebassets/vendors/floating-ui-core.js",
+        "staticwebassets/vendors/floating-ui.js",
+        "staticwebassets/vendors/inputmask.js",
+        "staticwebassets/vendors/jsencrypt.js",
+        "staticwebassets/vendors/sha512.js"
+      ]
+    },
+    "Blazorise.Charts/1.5.3": {
+      "sha512": "p0oIshKXBytQX7yc8209N/8ug7oiYaBt9GYKKdRctUnUmOi3Zr1EOuw/SCo3SMWpReMgikousDfQSUPnLRG0ng==",
+      "type": "package",
+      "path": "blazorise.charts/1.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.charts.1.5.3.nupkg.sha512",
+        "blazorise.charts.nuspec",
+        "build/Blazorise.Charts.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.Charts.props",
+        "buildTransitive/Blazorise.Charts.props",
+        "lib/net6.0/Blazorise.Charts.dll",
+        "lib/net6.0/Blazorise.Charts.xml",
+        "lib/net7.0/Blazorise.Charts.dll",
+        "lib/net7.0/Blazorise.Charts.xml",
+        "lib/net8.0/Blazorise.Charts.dll",
+        "lib/net8.0/Blazorise.Charts.xml",
+        "staticwebassets/charts.js",
+        "staticwebassets/utilities.js"
+      ]
+    },
+    "Blazorise.Licensing/1.2.0": {
+      "sha512": "h7jkAF+yyIKnUqFYivaxIySDma1zLV+0xcg52r2gIe772BLQWnBaANjpMBKXxRlYiEyOGPQWjMHJWs3dL/TgmA==",
+      "type": "package",
+      "path": "blazorise.licensing/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.licensing.1.2.0.nupkg.sha512",
+        "blazorise.licensing.nuspec",
+        "lib/net6.0/Blazorise.Licensing.dll",
+        "lib/net7.0/Blazorise.Licensing.dll",
+        "lib/net8.0/Blazorise.Licensing.dll"
+      ]
+    },
+    "Lambda2Js/3.1.4": {
+      "sha512": "yxPJ5n+jUdjTZSItFj2wx5uFGm8iN6Gt42apqnEq0Zm5R6GgueZFFl+GDSe/CEogMSaBRw8kRG3yZm8ABFWXGQ==",
+      "type": "package",
+      "path": "lambda2js/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "icon-512.png",
+        "lambda2js.3.1.4.nupkg.sha512",
+        "lambda2js.nuspec",
+        "lib/net40/Lambda2Js.dll",
+        "lib/net40/Lambda2Js.xml",
+        "lib/netstandard1.0/Lambda2Js.dll",
+        "lib/netstandard1.0/Lambda2Js.xml",
+        "lib/netstandard2.0/Lambda2Js.dll",
+        "lib/netstandard2.0/Lambda2Js.xml"
+      ]
+    },
     "Microsoft.AspNetCore.App.Internal.Assets/10.0.7": {
       "sha512": "ao3i+ks0uOQ7FWacI1hqHkUczebmXrGkUB63Xhkc34QbSzG9nYBlDv9v5l6rtCrHMsDW+13kZlpJrSj1HXddqg==",
       "type": "package",
@@ -2127,6 +2392,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Blazorise.Charts >= 1.5.3",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly >= 10.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 10.0.7",
@@ -2178,6 +2444,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Blazorise.Charts": {
+            "target": "Package",
+            "version": "[1.5.3, )"
+          },
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",
