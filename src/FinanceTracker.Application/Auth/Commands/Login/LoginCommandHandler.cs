@@ -24,6 +24,8 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, string>
             return "Invalid password";
         }
 
-        return "Login successful";
+        var token = JwtService.GenerateToken(user);
+
+        return token;
     }
 }

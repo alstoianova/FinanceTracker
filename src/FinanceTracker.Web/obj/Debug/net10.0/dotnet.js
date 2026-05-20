@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "FinanceTracker.Web",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-stPhrqZIDIcNKmVWfANEZY/gz5rTCl2VeE/qc3Za5iI=",
+    "hash": "sha256-yZVwPGv7rkSSSUgQrLz87OYncGq0gcyQr1pm3oIi5G0=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.mx9wzm9o5h.js"
@@ -1266,16 +1266,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "FinanceTracker.Web.wasm",
-        "name": "FinanceTracker.Web.sfdm7ras2w.wasm",
-        "integrity": "sha256-iEBK5XKsB0ItssGyLGrWApXmVVfRTYck2458qPnZ4Vk=",
+        "name": "FinanceTracker.Web.0p8ln3jbex.wasm",
+        "integrity": "sha256-vI02Hiu8Uy/0fBJTBeiC3zOnq5nD5dueySa6xZitcjw=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "FinanceTracker.Web.pdb",
-        "name": "FinanceTracker.Web.tb6hb59ng8.pdb",
-        "integrity": "sha256-SalqjOZ4k+ofGf/Ln8uzOlc513vE9m5bixfZdzpwAAU=",
+        "name": "FinanceTracker.Web.w4z10b8o1k.pdb",
+        "integrity": "sha256-IPTFvPuQfJw3eWlarbnP+G57Apek8vzSFWhPo0ASewo=",
         "cache": "force-cache"
       }
     ],
