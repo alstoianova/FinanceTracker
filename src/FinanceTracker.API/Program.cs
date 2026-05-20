@@ -1,3 +1,5 @@
+using FinanceTracker.Application.Auth.Commands.Register;
+using MediatR;
 using FinanceTracker.Application.Common.Interfaces;
 using FinanceTracker.Infrastructure;
 using FinanceTracker.Infrastructure.Persistence;
@@ -7,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddMediatR(typeof(RegisterCommand).Assembly);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
