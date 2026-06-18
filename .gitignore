@@ -1,6 +1,51 @@
+## Build folders
 bin/
 obj/
+
+## Visual Studio
 .vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Rider
+.idea/
+*.sln.iml
+
+## Dotnet
+*.dbmdl
 *.db
-*.dll
 *.pdb
+*.log
+*.cache
+*.zip
+*.tar.gz
+*.nupkg
+
+## Publish output
+publish/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## User secrets
+secrets.json
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## npm and JS tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+## Other
+.vscode/
+.env
+.env.*
