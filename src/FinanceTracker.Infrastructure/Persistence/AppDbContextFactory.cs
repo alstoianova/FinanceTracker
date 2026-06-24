@@ -9,7 +9,8 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
-        optionsBuilder.UseSqlite("Data Source=finance.db");
+        optionsBuilder.UseNpgsql(
+            "Host=localhost;Port=5432;Database=financetracker;Username=postgres;Password=postgres");
 
         return new AppDbContext(optionsBuilder.Options);
     }

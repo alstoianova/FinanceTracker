@@ -57,7 +57,8 @@ public class TransactionsController : ControllerBase
 
             if (account == null)
             {
-                return BadRequest("Account not found");
+              return BadRequest(
+    $"Account not found. Received AccountId = {transaction.AccountId}");
             }
 
             transaction.Id = Guid.NewGuid();

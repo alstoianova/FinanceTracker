@@ -18,4 +18,10 @@ public class AppDbContext : DbContext, IAppDbContext
     public DbSet<Category> Categories => Set<Category>();
 
     public DbSet<Transaction> Transactions => Set<Transaction>();
+
+    public Task<int> SaveChangesAsync(
+        CancellationToken cancellationToken)
+    {
+        return base.SaveChangesAsync(cancellationToken);
+    }
 }

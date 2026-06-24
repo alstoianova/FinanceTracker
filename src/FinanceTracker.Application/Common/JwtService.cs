@@ -8,7 +8,7 @@ namespace FinanceTracker.Application.Common;
 
 public static class JwtService
 {
-    private const string SecretKey = "SUPER_SECRET_KEY_123456789";
+    private const string SecretKey = "FinanceTrackerSuperSecretKey2026ForJwtAuthentication123456";
     private static readonly byte[] KeyBytes = Encoding.UTF8.GetBytes(SecretKey);
 
     public static string GenerateToken(User user)
